@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Toastify__toast {
+
+    font-family: "Atlas Grotesk Web", Arial, Helvetica, sans-serif !important;
+  
+    color: #2b8dee !important;
+  
+    font-size: 1.2rem !important;
+  
+    padding: 8px !important;
+  
+  }
