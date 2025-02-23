@@ -52,7 +52,7 @@ const Route = createBrowserRouter([
             {
                 path:"equipment",
                 element:<MyEquipmentList></MyEquipmentList> ,
-                loader:()=>fetch("http://localhost:5000/products")
+                
             },
             {
                 path:"/update/:id",

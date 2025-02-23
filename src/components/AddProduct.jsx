@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import { toast } from "react-toastify";
+import { AuthContext } from "./AuthProvider";
 
 const AddProduct = () => {
+
+  const {user}=useContext(AuthContext)
+
+  console.log(user.displayName,    user.email)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -30,6 +37,7 @@ const AddProduct = () => {
       userName,
     };
     console.log("Submitted Data:", formData);
+    
     fetch("http://localhost:5000/products", {
       method: "POST",
       headers: {
@@ -48,7 +56,7 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="bg-[#F4F8D3]  pb-40">
+    <div className="bg-[#dfe0d4]  pb-40">
       <div className="text-center py-20">
         <h1 className="lg:text-5xl  text-3xl font-semibold text-gray-800 py-3">
           Add New Product
@@ -187,7 +195,8 @@ const AddProduct = () => {
               <input
                 type="email"
                 name="userEmail"
-                placeholder="Enter Your Email"
+                defaultValue={user.email}
+                readOnly
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -200,7 +209,8 @@ const AddProduct = () => {
               <input
                 type="text"
                 name="userName"
-                placeholder=" User Name"
+                defaultValue={user.displayName}
+                readOnly
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>

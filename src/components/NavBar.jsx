@@ -9,7 +9,7 @@ const NavBar = () => {
     userSignOut()
       .then((data) => {
         console.log(data.user);
-        setUser(data.user)
+        setUser(data.user);
       })
       .then((error) => {
         console.log(error.message);
@@ -21,9 +21,9 @@ const NavBar = () => {
         <NavLink to="/" className="hover:text-green-300 transition">
           Home
         </NavLink>
-    
+
         <NavLink to="/AllSports" className="hover:text-green-300 transition">
-        All Sports Equipment
+          All Sports Equipment
         </NavLink>
         <NavLink to="/addProduct" className="hover:text-green-300 transition">
           Add Product
@@ -92,21 +92,26 @@ const NavBar = () => {
         </div>
         <div className="navbar-end">
           {user && user.email ? (
-            <div className="dropdown dropdown-hover">
-              <div tabIndex={0} role="button" className="btn m-1">
-                {" "}
-                img
-                <img src="" alt="" srcset="" />
+            <div className="dropdown dropdown-hover flex gap-4 justify-center items-center">
+              <div>
+                <p>{user.displayName}</p>
               </div>
-              <ul
-                tabIndex={0}
-                className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
-              >
-                <li>
-                  {/* <a>Loge Out</a> */}
-                  <button onClick={handleLogOUT}> Loge Out</button>
-                </li>
-              </ul>
+              <div>
+                <div tabIndex={0} role="button" className="btn m-1">
+                  {" "}
+                  img
+                  <img src="" alt="" srcset="" />
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                >
+                  <li>
+                    {/* <a>Loge Out</a> */}
+                    <button onClick={handleLogOUT}> Loge Out</button>
+                  </li>
+                </ul>
+              </div>
             </div>
           ) : (
             <Link to={"/login"}>
