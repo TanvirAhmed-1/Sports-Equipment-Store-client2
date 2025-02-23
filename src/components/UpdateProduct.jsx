@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const UpdateProduct = () => {
   const loaderData = useLoaderData();
@@ -29,9 +30,9 @@ const UpdateProduct = () => {
       stockStatus,
     };
 
-    console.log("Submitted Data:", Data);
+    // console.log("Submitted Data:", Data);
 
-    fetch(`http://localhost:5000/products/`, {
+    fetch(`http://localhost:5000/products/${loaderData._id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -41,6 +42,9 @@ const UpdateProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        if(data.matchedCount>0){
+          toast.success("Data Update is Successful")
+        }
       });
   };
 

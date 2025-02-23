@@ -11,6 +11,7 @@ import Register from '../components/Register';
 import MyEquipmentList from '../components/MyEquipmentList';
 import UpdateProduct from '../components/UpdateProduct';
 import PrivateRoute from './PrivateRoute';
+import AllSportseqube from '../components/AllSportseqube';
 
 const Route = createBrowserRouter([
     {
@@ -42,6 +43,11 @@ const Route = createBrowserRouter([
             {
                 path:"register",
                 element:<Register></Register>
+            },
+            {
+             path:"AllSports",
+             element:<AllSportseqube></AllSportseqube>,
+             loader:()=>fetch("http://localhost:5000/products")
             },
             {
                 path:"equipment",
