@@ -1,4 +1,9 @@
+import { useLoaderData } from "react-router-dom";
+
 const UpdateProduct = () => {
+  const loaderData = useLoaderData();
+  console.log(loaderData);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -11,9 +16,7 @@ const UpdateProduct = () => {
     const customization = form.customization.value;
     const processingTime = form.processingTime.value;
     const stockStatus = form.stockStatus.value;
-    //   const userEmail = form.userEmail.value;
-    //   const userName = form.userName.value;
-
+    
     const Data = {
       image,
       itemName,
@@ -24,15 +27,14 @@ const UpdateProduct = () => {
       customization,
       processingTime,
       stockStatus,
-      // userEmail,
-      // userName,
     };
+
     console.log("Submitted Data:", Data);
 
     fetch(`http://localhost:5000/products/`, {
       method: "PUT",
       headers: {
-        "contact-type": "application/json",
+        "content-type": "application/json",
       },
       body: JSON.stringify(Data),
     })
@@ -64,7 +66,7 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="image"
-                placeholder="Enter image URL"
+                defaultValue={loaderData.image || ""}
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -78,7 +80,7 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="itemName"
-                placeholder="Enter item name"
+                defaultValue={loaderData.itemName || ""}
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -91,15 +93,15 @@ const UpdateProduct = () => {
               <select
                 name="categoryName"
                 className="w-full px-4 *:text-black py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                defaultValue={loaderData.categoryName || ""}
                 required
               >
                 <option value="">Select a category</option>
-                <option value="Food">Volleyball</option>
-                <option value="Food">Cricket</option>
-                <option value="Food">Shoes & Boot</option>
-                <option value="Fitness">Football</option>
-                <option value="Fitness">More</option>
-                <option value="Shoes & Boots">Fitness</option>
+                <option value="Volleyball">Volleyball</option>
+                <option value="Cricket">Cricket</option>
+                <option value="Shoes & Boot">Shoes & Boot</option>
+                <option value="Football">Football</option>
+                <option value="Fitness">Fitness</option>
               </select>
             </div>
 
@@ -110,7 +112,7 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="price"
-                placeholder="Enter price"
+                defaultValue={loaderData.price || ""}
                 className="w-full px-4 py-3 my-2 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -122,11 +124,11 @@ const UpdateProduct = () => {
                 Rating (1-5)
               </label>
               <input
-                type="text"
+                type="number"
                 name="rating"
-                placeholder="Enter rating"
                 min="1"
                 max="5"
+                defaultValue={loaderData.rating || ""}
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
@@ -140,7 +142,7 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="customization"
-                placeholder="Enter customization details"
+                defaultValue={loaderData.customization || ""}
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -153,7 +155,7 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="processingTime"
-                placeholder="Enter processing time (e.g., 3 days)"
+                defaultValue={loaderData.processingTime || ""}
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -166,36 +168,10 @@ const UpdateProduct = () => {
               <input
                 type="number"
                 name="stockStatus"
-                placeholder="Enter available quantity"
+                defaultValue={loaderData.stockStatus || ""}
                 className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
-
-            {/* User Email (Read-only) */}
-            {/* <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  User Email
-                </label>
-                <input
-                  type="email"
-                  name="userEmail"
-                  placeholder="Enter Your Email"
-                  className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div> */}
-
-            {/* User Name (Read-only) */}
-            {/* <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  User Name
-                </label>
-                <input
-                  type="text"
-                  name="userName"
-                  placeholder=" User Name"
-                  className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div> */}
           </div>
 
           {/* Description (Full Width) */}
@@ -205,8 +181,8 @@ const UpdateProduct = () => {
             </label>
             <textarea
               name="description"
-              placeholder="Enter description"
               rows="4"
+              defaultValue={loaderData.description || ""}
               className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
@@ -218,7 +194,7 @@ const UpdateProduct = () => {
               type="submit"
               className="w-full bg-blue-600 text-white py-4 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
-              Add Now
+              Update Product
             </button>
           </div>
         </form>
