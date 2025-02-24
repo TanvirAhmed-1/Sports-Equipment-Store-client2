@@ -17,7 +17,7 @@ const Products = () => {
         setProduct(filterProduct)
     }
     return (
-        <div className='py-20'>
+        <div className='py-20 w-11/12 mx-auto'>
            <h1 className='text-4xl font-semibold text-center text-black'>Shop Now</h1> 
            <p className='text-2xl font-semibold text-center text-gray-600 pt-4 pb-16'>Find Your Products</p>
 
@@ -31,7 +31,7 @@ const Products = () => {
             <NavLink onClick={()=>category("More")} className="text-xl  font-semibold btn rounded-xl bg-gray-400 text-white border-none" > More </NavLink>
            </div>
 
-           <div className=' w-10/12 mx-auto grid  gap-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 py-20'>
+           <div className=' w-10/12 mx-auto grid  gap-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-1 py-20'>
             {
                 product.map(value=><ProductCard key={value._id}
                    Products={value}

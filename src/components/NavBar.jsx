@@ -39,11 +39,6 @@ const NavBar = () => {
         <NavLink to="/contact" className="hover:text-green-300 transition">
           Contact Us
         </NavLink>
-        {user && (
-          <NavLink to="/profile" className="hover:text-green-300 transition">
-            Profile
-          </NavLink>
-        )}
       </div>
     </nav>
   );
@@ -94,7 +89,7 @@ const NavBar = () => {
           {user && user.email ? (
             <div className="dropdown dropdown-hover flex gap-4 justify-center items-center">
               <div>
-                <p>{user.displayName}</p>
+                <p className="text-lg font-medium text-gray-200">{user.displayName}</p>
               </div>
               <div>
                 <div tabIndex={0} role="button" className="btn m-1">

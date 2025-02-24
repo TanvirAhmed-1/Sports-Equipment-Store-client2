@@ -10,21 +10,19 @@ const Footer = () => {
       <footer className="w-full border-t bg-black py-8">
         <div className="container px-4 py-12 md:pt-16">
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-            {/* Brand Section */}
             <div className="space-y-4">
               <Link href="/" className="flex items-center space-x-2">
                 <img src={logo} alt="" className="md:w-32 w-20" srcset="" />
                 {/* <span className="font-bold text-xl">Victory Zone</span> */}
               </Link>
-              <p className="text-sm text-gray-600">
+              <p className="text-lg text-gray-300 text-balance">
                 Your one-stop shop for quality products and excellent service.
               </p>
             </div>
 
-            {/* Quick Links */}
             <div className="space-y-4">
               <h3 className="font-semibold text-xl text-white">Quick Links</h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-lg *:text-gray-300">
                 <li>
                   <Link href="/" className="hover:text-blue-600">
                     Home
@@ -46,7 +44,7 @@ const Footer = () => {
             {/* Contact Info */}
             <div className="space-y-4">
               <h3 className="font-semibold text-xl text-white">Contact Us</h3>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-2 text-lg *:text-gray-300">
                 <li className="flex items-center gap-2">
                   <MdEmail className="h-5 w-5 text-gray-600" />
                   <span>contact@bdstore.com</span>
