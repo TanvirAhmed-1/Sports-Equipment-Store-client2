@@ -83,7 +83,7 @@ const AddProduct = () => {
               />
             </div>
 
-            {/* Item Name */}
+           
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
               Product Title
@@ -97,7 +97,7 @@ const AddProduct = () => {
               />
             </div>
 
-            {/* Category Name */}
+           
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Category Name
@@ -107,14 +107,14 @@ const AddProduct = () => {
                 className="w-full px-4 *:text-black py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               >
-                <option value="">Select a category</option>
-                <option value="Food">Volleyball</option>
-                <option value="Food">Cricket</option>
-                <option value="Food">Shoes & Boot</option>
-                <option value="Fitness">Football</option>
-                <option value="Fitness">More</option>
-                <option value="Shoes & Boots">Fitness</option>
-                {/* Add more categories as needed */}
+                <option>Select a category</option>
+                <option>Volleyball</option>
+                <option>Cricket</option>
+                <option>Shoes & Boot</option>
+                <option >Football</option>
+                <option >More</option>
+                <option >Fitness</option>
+            
               </select>
             </div>
 

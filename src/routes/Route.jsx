@@ -12,6 +12,10 @@ import MyEquipmentList from '../components/MyEquipmentList';
 import UpdateProduct from '../components/UpdateProduct';
 import PrivateRoute from './PrivateRoute';
 import AllSportseqube from '../components/AllSportseqube';
+import Products from '../components/Products';
+import NavBar from '../components/NavBar';
+import NavSlider from '../components/NavSlider';
+
 
 const Route = createBrowserRouter([
     {
@@ -21,9 +25,17 @@ const Route = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<Home></Home>,
-                loader:()=>fetch("http://localhost:5000/products")
+                element: (
+                  <>
+                    <NavSlider></NavSlider>
+                    <Products></Products>
+                  </>
+                ),
+                loader: () => fetch("http://localhost:5000/products")
             },
+
+
+
             {
                 path:"contact",
                 element:<ContactUs></ContactUs>
@@ -58,9 +70,12 @@ const Route = createBrowserRouter([
                 path:"/update/:id",
                 element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
-            }
+            },
+
         ]
-    }
+        
+    },
+
 ])
 
 export default Route;

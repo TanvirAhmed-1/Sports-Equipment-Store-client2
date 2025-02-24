@@ -67,7 +67,7 @@ const MyEquipmentList = () => {
   return (
     <div className="bg-white lg:min-h-screen min-h-full ">
       <div></div>
-      <div className="lg:min-h-screen grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-20 px-10 bg-slate-400 border">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-20 px-10 ">
         {userdata.map((value) => (
           <MyCard
             key={value._id}

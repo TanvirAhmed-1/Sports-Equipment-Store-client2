@@ -18,8 +18,8 @@ const MyCard = ({ product,deleteProduct }) => {
   } = product;
 
   return (
-    <div className=" card bg-white md:w-96 w-72 shadow-xl p-6 border-[#F3F3F3] border-2 grid justify-center items-center mx-auto">
-      <figure className="  bg-[#F3F3F3] rounded-2xl flex justify-center items-center">
+    <div className="flex flex-col bg-white md:w-96 w-72 h-full shadow-xl p-6 border-[#F3F3F3] border-2  rounded-lg mx-auto">
+      <figure className=" bg-[#F3F3F3] rounded-2xl flex justify-center items-center">
         <img
           src={image}
           alt={itemName}
@@ -27,7 +27,7 @@ const MyCard = ({ product,deleteProduct }) => {
         />
       </figure>
       <div className="flex flex-col justify-start items-start p-4">
-        <h2 className="card card-title">
+        <h2 className=" grid">
           <h3 className="font-bold text-2xl pt-2 text-black">{itemName}</h3>
         </h2>
 
@@ -48,17 +48,17 @@ const MyCard = ({ product,deleteProduct }) => {
           Stock Status: {stockStatus}
         </p>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex gap-4 mt-6 items-center">
           <button
             onClick={() => deleteProduct(_id)}
-            className="btn btn-ghost text-red-400 text-2xl"
+            className="btn bg-slate-300 btn-ghost text-red-400 text-2xl"
           >
             <span className="text-lg text-sky-600 font-medium">Delete</span> <MdDelete />
           </button>
 
           <Link to={`/update/${_id}`}>
             {" "}
-            <button className="btn btn-ghost text-black text-xl">
+            <button className="btn bg-slate-300 btn-ghost text-black text-xl">
             <span className="text-lg text-sky-600 font-medium">Update</span> <FaPen />
             </button>
           </Link>
