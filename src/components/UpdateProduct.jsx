@@ -59,7 +59,7 @@ const UpdateProduct = () => {
           store.
         </p>
       </div>
-      <div className="w-8/12 mx-auto  bg-white p-10 md:p-14 md:py-20 rounded-xl shadow-lg">
+      <div className="lg:w-8/12 mx-auto  bg-white p-10 md:p-14 md:py-20 rounded-xl shadow-lg">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Image URL */}

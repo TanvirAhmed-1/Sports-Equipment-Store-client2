@@ -70,7 +70,7 @@ const MyEquipmentList = () => {
         <h1 className="text-center md:text-5xl text-2xl text-black font-bold">Your Products</h1>
         <p className="md:text-xl text-center my-4  text-lg font-medium text-gray-600">These are all your products. You can view product details, update, and delete them.</p>
       </div>
-      <div className=" w-11/12 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 py-20 px-10 justify-center items-center ">
+      <div className=" lg:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-20 px-10 justify-center items-center ">
         {userdata.map((value) => (
           <MyCard
             key={value._id}

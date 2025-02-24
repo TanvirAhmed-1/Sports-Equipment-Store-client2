@@ -12,7 +12,7 @@ const AllSportseqube = () => {
       <div className="py-10">
         <h1 className="text-3xl text-gray-500 text-center font-semibold">Explore Our Sports Equipment Collection And Shop Your Favorite Gear</h1>
       </div>
-      <div className="w-11/12 mx-auto border-2 border-solid border-black bg-white text-slate-600 text-xl font-medium">
+      <div className="lg:w-11/12 mx-auto border-2 border-solid border-black bg-white text-slate-600 text-xl font-medium">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}

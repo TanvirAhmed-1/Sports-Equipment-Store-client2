@@ -56,7 +56,7 @@ const NavSlider = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative">
             <img
-              className="object-cover w-full lg:max-h-[700px] md:max-h-[500px] max-h-[400px]"
+              className="object-cover w-full lg:max-h-[700px] md:max-h-[500px] h-[400px]"
               src={slide.image}
               alt={`Slide ${index + 1}`}
             />
@@ -73,17 +73,17 @@ const NavSlider = () => {
                 <h2 className="text-gray-100 lg:text-5xl md:text-3xl text-2xl font-bold mb-2">
                   {slide.title}
                 </h2>
-                <h3 className="text-white lg:text-3xl my-4 md:text-xl text-lg font-medium mb-2">
+                <h3 className="text-white lg:text-3xl lg:my-4 md:text-xl text-lg font-medium mb-2">
                   {slide.subtitle}
                 </h3>
-                <p className="text-orange-400 lg:text-xl mt-6 md:text-base text-sm max-w-2xl mb-4">
+                <p className="text-orange-400 text-wrap lg:text-xl lg:mt-6 md:text-base text-sm max-w-2xl mb-4">
                   {slide.description}
                 </p>
                 
                 {/* Animated "Shop Now" Button */}
                 <motion.a
                   href="/shop" // Change this to your shop link
-                  className="bg-white text-black flex my-6 items-center gap-2 font-semibold px-6 py-4 rounded-full lg:text-xl md:text-lg text-base hover:bg-gray-200 transition duration-300"
+                  className="bg-white text-black flex lg:my-6 items-center gap-2 font-semibold px-6 py-4 rounded-full lg:text-xl md:text-lg text-base hover:bg-gray-200 transition duration-300"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 }} // Delayed animation

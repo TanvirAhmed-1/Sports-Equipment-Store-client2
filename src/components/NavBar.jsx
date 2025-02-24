@@ -16,7 +16,7 @@ const NavBar = () => {
       });
   };
   const link = (
-    <nav className=" w-full mx-auto px-8 ">
+    <nav className=" w-full mx-auto md:px-8 ">
       <div className=" flex lg:flex-row p-4  flex-col lg:gap-8  md:gap-5 gap-4 text-2xl font-medium leading-none text-gray-400">
         <NavLink to="/" className="hover:text-green-300 transition">
           Home
@@ -45,10 +45,10 @@ const NavBar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-sky-500">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn bg-gray-300 btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -66,7 +66,7 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu   menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu   menu-sm dropdown-content bg-gray-200 rounded-box z-[10]  mt-3 w-60 p-2 shadow"
             >
               {link}
             </ul>
@@ -99,11 +99,11 @@ const NavBar = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                  className="dropdown-content menu bg-gray-200 rounded-box z-[10] w-20 shadow"
                 >
                   <li>
                     {/* <a>Loge Out</a> */}
-                    <button onClick={handleLogOUT}> Loge Out</button>
+                    <button className="text-sm" onClick={handleLogOUT}> Loge Out</button>
                   </li>
                 </ul>
               </div>
