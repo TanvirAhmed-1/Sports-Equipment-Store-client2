@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './NavBar';
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
+import NavSlider from './NavSlider';
 
 const Root = () => {
     return (
@@ -9,6 +10,9 @@ const Root = () => {
             <nav className=''>
                 <NavBar></NavBar>
             </nav>
+            <section className='max-h-'>
+               <NavSlider></NavSlider>
+            </section>
             <main>
             <Outlet></Outlet>
             </main>
