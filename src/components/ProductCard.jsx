@@ -9,7 +9,7 @@ const ProductCard = ({ Products }) => {
   const { _id, rating, price, itemName, image } = Products;
 
   return (
-    <div className=" card bg-white md:w-full w-72 shadow-xl p-6 border-[#F3F3F3] border-2 grid justify-center items-center mx-auto">
+    <div className=" card bg-white dark:bg-slate-600 md:w-full w-80 shadow-xl p-6 border-[#F3F3F3] border-2 grid justify-center items-center mx-auto">
       <figure className=" md:w-[282px] h-[280px]  bg-[#F3F3F3] rounded-2xl">
         <img
           src={image}
@@ -56,7 +56,7 @@ const ProductCard = ({ Products }) => {
             </div>
         </div>
 
-        <p className="text-gray-500 text-xl font-medium pt-3">Price: {price}</p>
+        <p className="text-gray-500 dark:text-white text-xl font-medium pt-3">Price: {price}</p>
 
         <div className="flex justify-start items-center">
           <Link to={"/"}>

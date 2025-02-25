@@ -65,10 +65,10 @@ const MyEquipmentList = () => {
   };
 
   return (
-    <div className="bg-white lg:min-h-screen min-h-full ">
+    <div className="bg-white dark:bg-black dark:text-white lg:min-h-screen min-h-full ">
       <div className="pt-20">
-        <h1 className="text-center md:text-5xl text-2xl text-black font-bold">Your Products</h1>
-        <p className="md:text-xl text-center my-4  text-lg font-medium text-gray-600">These are all your products. You can view product details, update, and delete them.</p>
+        <h1 className="text-center md:text-5xl text-2xl dark:text-white text-black font-bold">Your Products</h1>
+        <p className="md:text-xl text-center my-4  text-lg font-medium dark:text-white text-gray-600">These are all your products. You can view product details, update, and delete them.</p>
       </div>
       <div className=" lg:w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-20 px-10  ">
         {userdata.map((value) => (

@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const Root = () => {
   return (
-    <div className="bg-slate-300 w-12/13 mx-auto">
+    <div className="bg-slate-300 dark:bg-black w-12/13 mx-auto">
       <nav>
         <NavBar></NavBar>
       </nav>

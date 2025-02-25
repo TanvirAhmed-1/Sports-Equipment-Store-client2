@@ -56,36 +56,36 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="bg-[#dfe0d4]  pb-40">
+    <div className="bg-[#dfe0d4] dark:bg-black pb-40">
       <div className="text-center py-20">
-        <h1 className="lg:text-5xl  text-3xl font-semibold text-gray-800 py-3">
+        <h1 className="lg:text-5xl  text-3xl dark:text-white font-semibold text-gray-800 py-3">
           Add New Product
         </h1>
-        <p className="mt-2 text-gray-600 lg:text-2xl text-xl font-semibold">
+        <p className="mt-2 text-gray-600  px-4 text-wrap lg:text-2xl text-xl font-semibold">
           Fill in the details below to add a new product to your store. All
           fields marked with are required.
         </p>
       </div>
-      <div className="lg:w-8/12 mx-auto  bg-white p-10 md:p-14 md:py-20 rounded-xl shadow-lg">
+      <div className="lg:w-8/12 mx-auto dark:bg-black  bg-white p-10 md:p-14 md:py-20 rounded-xl shadow-lg">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Image URL */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 Image URL
               </label>
               <input
                 type="text"
                 name="image"
                 placeholder="Enter image URL"
-                className="w-full px-4 py-3 my-2 border bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-3 my-2 border  bg-white border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 required
               />
             </div>
 
            
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
               Product Title
               </label>
               <input
@@ -99,7 +99,7 @@ const AddProduct = () => {
 
            
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 Category Name
               </label>
               <select
@@ -120,7 +120,7 @@ const AddProduct = () => {
 
             {/* Price */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 Price
               </label>
               <input
@@ -134,7 +134,7 @@ const AddProduct = () => {
 
             {/* Rating */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 Rating (1-5)
               </label>
               <input
@@ -150,7 +150,7 @@ const AddProduct = () => {
 
             {/* Customization */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 Customization
               </label>
               <input
@@ -161,9 +161,8 @@ const AddProduct = () => {
               />
             </div>
 
-            {/* Processing Time */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 Processing Time
               </label>
               <input
@@ -176,7 +175,7 @@ const AddProduct = () => {
 
             {/* Stock Status */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 Available Quantity
               </label>
               <input
@@ -189,7 +188,7 @@ const AddProduct = () => {
 
             {/* User Email (Read-only) */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 User Email
               </label>
               <input
@@ -203,7 +202,7 @@ const AddProduct = () => {
 
             {/* User Name (Read-only) */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
                 User Name
               </label>
               <input
@@ -218,7 +217,7 @@ const AddProduct = () => {
 
           {/* Description (Full Width) */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-lg dark:text-white font-medium text-gray-700 mb-1">
               Description
             </label>
             <textarea

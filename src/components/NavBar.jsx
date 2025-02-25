@@ -17,13 +17,13 @@ const NavBar = () => {
   };
   const link = (
     <nav className=" w-full mx-auto md:px-8 ">
-      <div className=" flex lg:flex-row p-4  flex-col lg:gap-8  md:gap-5 gap-4 text-2xl font-medium leading-none text-gray-400">
+      <div className=" flex lg:flex-row p-4  flex-col lg:gap-8  items-center md:gap-5 gap-2 text-2xl font-medium  text-gray-400">
         <NavLink to="/" className="hover:text-green-300 transition">
           Home
         </NavLink>
 
         <NavLink to="/AllSports" className="hover:text-green-300 transition">
-          All Sports Equipment
+          All Sports Product
         </NavLink>
         <NavLink to="/addProduct" className="hover:text-green-300 transition">
           Add Product

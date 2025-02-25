@@ -18,7 +18,7 @@ const MyCard = ({ product,deleteProduct }) => {
   } = product;
 
   return (
-    <div className="card bg-white md:w-auto w-72 shadow-xl p-6 border-[#F3F3F3] border-2 grid justify-center items-center mx-auto">
+    <div className="card bg-white dark:bg-gray-800 md:w-auto w-80 shadow-xl p-6 border-[#F3F3F3] border-2 grid justify-center items-center mx-auto">
       <figure className="w-[200px] h-[200px] mx-auto  bg-[#F3F3F3] rounded-2xl flex justify-center items-center">
         <img
           src={image}
@@ -28,7 +28,7 @@ const MyCard = ({ product,deleteProduct }) => {
       </figure>
       <div className="flex flex-col justify-start items-start p-4">
         <h2 className=" card-title">
-          <h3 className="font-bold  text-xl pt-2 text-black">{itemName}</h3>
+          <h3 className="font-bold dark:text-white text-xl pt-2 text-black">{itemName}</h3>
         </h2>
 
         <div className="">

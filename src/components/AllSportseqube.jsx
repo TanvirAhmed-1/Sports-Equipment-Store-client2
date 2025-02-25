@@ -8,15 +8,15 @@ const AllSportseqube = () => {
 
 
   return (
-    <div className="bg-white pb-20 lg:min-h-screen min-h-full ">
+    <div className="bg-white dark:bg-black pb-20 lg:min-h-screen min-h-full ">
       <div className="py-10">
         <h1 className="text-3xl text-gray-500 text-center font-semibold">Explore Our Sports Equipment Collection And Shop Your Favorite Gear</h1>
       </div>
-      <div className="lg:w-11/12 mx-auto border-2 border-solid border-black bg-white text-slate-600 text-xl font-medium">
+      <div className="lg:w-11/12 mx-auto border-2 border-solid border-black dark:bg-black bg-white text-slate-600 text-xl font-medium">
         <div className="overflow-x-auto">
           <table className="table">
             {/* head */}
-            <thead className="text-xl font-semibold text-black text-center">
+            <thead className="text-xl font-semibold dark:text-white text-black text-center">
               <tr>
                 <th>Number</th>
                 <th>Product Title</th>
@@ -29,7 +29,7 @@ const AllSportseqube = () => {
             </thead>
             <tbody>
               {loaderData.map((value, index) => (
-                <tr className="text-center" key={value._id}>
+                <tr className="text-center dark:text-white" key={value._id}>
                   <th>{index + 1}</th>
                   <td className="text-start">{value.itemName}</td>
                   <td>{value.categoryName}</td>

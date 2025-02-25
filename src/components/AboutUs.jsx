@@ -3,15 +3,15 @@ import { FaUsers, FaTrophy, FaHeart, FaShoppingCart } from "react-icons/fa";
 
 const AboutUs = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen dark:bg-black bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
+        <h1 className="text-4xl dark:text-white font-bold text-center text-gray-900 mb-8">
           About EquiSports
         </h1>
 
         {/* Mission Section */}
-        <div className="bg-white shadow-lg rounded-lg p-8 mb-12">
+        <div className="bg-white dark:bg-gray-200 shadow-lg rounded-lg p-8 mb-12">
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Our Mission
           </h2>
@@ -26,7 +26,7 @@ const AboutUs = () => {
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Feature 1 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div className="bg-white dark:bg-gray-200 shadow-lg rounded-lg p-6 text-center">
             <FaUsers className="text-4xl text-blue-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Dedicated Community
@@ -37,7 +37,7 @@ const AboutUs = () => {
           </div>
 
           {/* Feature 2 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div className="bg-white dark:bg-gray-200 shadow-lg rounded-lg p-6 text-center">
             <FaTrophy className="text-4xl text-yellow-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Top-Quality Gear
@@ -48,7 +48,7 @@ const AboutUs = () => {
           </div>
 
           {/* Feature 3 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div className="bg-white dark:bg-gray-200 shadow-lg rounded-lg p-6 text-center">
             <FaHeart className="text-4xl text-red-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Customer-Centric
@@ -59,7 +59,7 @@ const AboutUs = () => {
           </div>
 
           {/* Feature 4 */}
-          <div className="bg-white shadow-lg rounded-lg p-6 text-center">
+          <div className="bg-white dark:bg-gray-200 shadow-lg rounded-lg p-6 text-center">
             <FaShoppingCart className="text-4xl text-green-500 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2">
               Easy Shopping
@@ -71,7 +71,7 @@ const AboutUs = () => {
         </div>
 
         {/* Team Section */}
-        <div className="bg-[#F4F8D3] shadow-lg rounded-lg p-8">
+        <div className="bg-[#F4F8D3] dark:bg-gray-200 shadow-lg rounded-lg p-8">
           <h2 className="text-4xl font-semibold text-gray-800 my-10">
           Privacy Policy
           </h2>
