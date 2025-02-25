@@ -8,7 +8,7 @@ const AllSportseqube = () => {
 
 
   return (
-    <div className="bg-white lg:min-h-screen min-h-full ">
+    <div className="bg-white pb-20 lg:min-h-screen min-h-full ">
       <div className="py-10">
         <h1 className="text-3xl text-gray-500 text-center font-semibold">Explore Our Sports Equipment Collection And Shop Your Favorite Gear</h1>
       </div>
@@ -31,7 +31,7 @@ const AllSportseqube = () => {
               {loaderData.map((value, index) => (
                 <tr className="text-center" key={value._id}>
                   <th>{index + 1}</th>
-                  <td>{value.itemName}</td>
+                  <td className="text-start">{value.itemName}</td>
                   <td>{value.categoryName}</td>
                   <td>{value.price}</td>
                   <td>{value.rating}</td>

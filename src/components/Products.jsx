@@ -26,12 +26,12 @@ const Products = () => {
             <NavLink onClick={()=>category("Cricket")} className="md:text-xl leading-normal font-semibold btn rounded-xl bg-gray-400 text-white border-none" > Cricket </NavLink>
             <NavLink onClick={()=>category("Football")} className="md:text-xl leading-normal font-semibold btn rounded-xl bg-gray-400 text-white border-none" > Football </NavLink>
             <NavLink onClick={()=>category("Fitness")} className="md:text-xl leading-normal font-semibold btn rounded-xl bg-gray-400 text-white border-none" > Fitness </NavLink>
-            <NavLink onClick={()=>category("Shoes $ Boot")} className="md:text-xl leading-normal font-semibold btn rounded-xl bg-gray-400 text-white border-none" > Shoes & Boot </NavLink>
+            <NavLink onClick={()=>category("Shoes $ Boot")} className="md:text-xl leading-normal font-semibold btn rounded-xl bg-gray-400 text-white border-none" > Shoes_Boot </NavLink>
             <NavLink onClick={()=>category("Volleyball")} className="md:text-xl leading-normal font-semibold btn rounded-xl bg-gray-400 text-white border-none" > Volleyball </NavLink>
             <NavLink onClick={()=>category("More")} className="md:text-xl leading-normal font-semibold btn rounded-xl bg-gray-400 text-white border-none" > More </NavLink>
            </div>
 
-           <div className=' lg:w-10/12 mx-auto grid  gap-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:py-20 py-4'>
+           <div className=' lg:w-11/12 mx-auto grid  gap-5 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:py-20 py-4'>
             {
                 product.map(value=><ProductCard key={value._id}
                    Products={value}

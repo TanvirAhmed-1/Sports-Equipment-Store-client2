@@ -3,14 +3,14 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const ProductDetails = () => {
   const idData = useLoaderData();
-  console.log(idData);
+  // console.log(idData);
 
 
   return (
     <div>
       <div className="card lg:card-side bg-yellow-100 shadow-xl p-10">
-        <figure className="w-[20%] p-6">
-          <img src={idData.image} className="object-cover rounded-xl p-6" alt="Album" />
+        <figure className="w-[400px] h-[400px] p-6">
+          <img src={idData.image} className="object-cover rounded-xl " alt="Album" />
         </figure>
         <div className="card-body">
           <h2 className="text-2xl font-bold text-gray-700">
@@ -59,9 +59,9 @@ const ProductDetails = () => {
               </div>
             
           </div>
-          <p className="text-lg font-medium text-black">{idData.description}</p>
+          <p className="text-lg font-medium text-black">Description:  {idData.description}</p>
 
-          <div className="card-actions lg:gap-20 justify-center">
+          <div className="card-actions lg:gap-20 justify-start py-4">
             <Link to={"/"}>
               <button className="btn btn-primary">Buy Now</button>
             </Link>

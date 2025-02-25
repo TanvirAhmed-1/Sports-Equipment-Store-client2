@@ -19,7 +19,7 @@ const MyCard = ({ product,deleteProduct }) => {
 
   return (
     <div className="card bg-white md:w-auto w-72 shadow-xl p-6 border-[#F3F3F3] border-2 grid justify-center items-center mx-auto">
-      <figure className="w-[200px] mx-auto  bg-[#F3F3F3] rounded-2xl flex justify-center items-center">
+      <figure className="w-[200px] h-[200px] mx-auto  bg-[#F3F3F3] rounded-2xl flex justify-center items-center">
         <img
           src={image}
           alt={itemName}

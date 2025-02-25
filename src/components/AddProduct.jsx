@@ -110,7 +110,7 @@ const AddProduct = () => {
                 <option>Select a category</option>
                 <option>Volleyball</option>
                 <option>Cricket</option>
-                <option>Shoes & Boot</option>
+                <option>Shoes_Boot</option>
                 <option >Football</option>
                 <option >More</option>
                 <option >Fitness</option>
