@@ -5,15 +5,15 @@ import { Link } from "react-router";
 const ProductCard = ({ Products }) => {
   console.log(Products);
 
-  const { _id, rating, price, itemName, image } = product;
+  const { _id, rating, price, itemName, image } = Products;
 
   return (
     <div className=" card bg-white md:w-80 w-72 shadow-xl p-6 border-[#F3F3F3] border-2 grid justify-center items-center mx-auto">
-      <figure className=" md:w-[282px] h-[181px] bg-[#F3F3F3] rounded-2xl">
+      <figure className=" md:w-[282px]  bg-[#F3F3F3] rounded-2xl">
         <img
           src={image}
           alt={itemName}
-          className="object-cover w-[124px] h-[166px]"
+          className="object-cover w-full"
         />
       </figure>
       <div className="flex flex-col justify-start items-start p-4">
