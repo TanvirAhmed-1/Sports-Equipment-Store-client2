@@ -6,23 +6,38 @@ import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { googleUser, setUser,userLogin } = useContext(AuthContext);
+  const { googleUser, setUser,userLogin,gitHubUser } = useContext(AuthContext);
   //  google
   const handleGoogleUser = () => {
     googleUser()
       .then((data) => {
         // console.log(data.user);
-        // setUser(data.user);
+        setUser(data.user);
         navigate("/");
+        toast.error("Login Successful")
       })
       .then((error) => {
         // console.log(error);
-        toast.error("Login Error")
+        
       });
   };
 
   // github user
-  const handleGithubLohIn = () => {};
+  const handleGithubLohIn = () => {
+    gitHubUser()
+    .then((data) => {
+      console.log(data.user);
+      setUser(data.user);
+      navigate("/");
+      toast.error("Login Successful")
+    })
+    .then((error) => {
+      // console.log(error);
+      
+    });
+
+  };
+
  const location=useLocation()
 //  console.log(location)
   // form user
