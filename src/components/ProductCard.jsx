@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { toast } from "react-toastify";
 
 const ProductCard = ({ Products }) => {
-  console.log(Products);
+  // console.log(Products);
 
   const { _id, rating, price, itemName, image } = Products;
 

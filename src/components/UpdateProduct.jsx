@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 const UpdateProduct = () => {
   const loaderData = useLoaderData();
-  console.log(loaderData);
+  // console.log(loaderData);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ const UpdateProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if(data.matchedCount>0){
           toast.success("Data Update is Successful")
         }

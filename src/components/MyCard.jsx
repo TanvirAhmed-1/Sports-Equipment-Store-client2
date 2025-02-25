@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const MyCard = ({ product,deleteProduct }) => {
-  console.log(product);
+  // console.log(product);
 
   const {
     _id,

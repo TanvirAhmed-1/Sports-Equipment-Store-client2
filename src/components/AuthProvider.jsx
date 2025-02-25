@@ -7,6 +7,8 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateCurrentUser,
+  updateProfile,
 } from "firebase/auth";
 import { app } from "../firebase/firebase.inite";
 
@@ -42,7 +44,9 @@ const AuthProvider = ({ children }) => {
   };
 
   // user photo and
-  const updateUserProfile = () => {};
+  const updateUserProfile = (updateData) => {
+    return updateProfile(auth.currentUser, updateData)
+  };
 
   // user sign out
   const userSignOut = () => {

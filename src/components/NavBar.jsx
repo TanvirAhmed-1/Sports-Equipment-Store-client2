@@ -2,17 +2,20 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { AuthContext } from "./AuthProvider";
+import { toast } from "react-toastify";
 
 const NavBar = () => {
   const { user, setUser, userSignOut } = useContext(AuthContext);
+  // console.log(user.reloadUserInfo.photoUrl)
   const handleLogOUT = () => {
     userSignOut()
       .then((data) => {
-        console.log(data.user);
+        // console.log(data.user);
         setUser(data.user);
+        toast.success("User Successfully Loge Out ")
       })
       .then((error) => {
-        console.log(error.message);
+        // console.log(error.message);
       });
   };
   const link = (
@@ -95,7 +98,7 @@ const NavBar = () => {
                 <div tabIndex={0} role="button" className=" m-1">
                   {" "}
                      {
-                      user ? <img  className="rounded-full md:w-14 w-10" src={user?.reloadUserInfo?.photoUrl} alt="" srcset="" />: <p>img</p>
+                      user ? <img  className="rounded-full border-2 border-solid border-white md:w-14 w-10" src={user.reloadUserInfo.photoUrl} alt="" srcset="" />: <img src={user.metadata?.photoURL} alt="" srcset="" />
                      }
                   <img src="" alt="" srcset="" />
                 </div>

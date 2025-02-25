@@ -17,7 +17,7 @@ const Register = () => {
 
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email,password)
+    // console.log(email,password)
     const valid = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,32}$/;
     if (!valid.test(password)) {
       SetErrorMessage(
@@ -30,20 +30,21 @@ const Register = () => {
     const photo = e.target.photo.value;
     userRegister(email, password)
       .then((res) => {
-        console.log(res.user)
+        // console.log(res.user)
         setUser(res.user);
-        navigate("/")
-        // updateUserProfile({ displayName: name, photoURL: photo })
-        //   .then(() => {
-        //     navigate("/");
-        //   })
-        //   .catch((err) => {
-        //     // console.log(err);
-        //   });
+        updateUserProfile({ displayName: name, photoURL: photo })
+          .then(() => {
+            navigate("/");
+          })
+          .catch((err) => {
+            // console.log(err);
+            toast.error("User photo Not Register")
+          });
         toast.success("user successfully signed in");
       })
       .catch((err) => {
-        console.log(err.message)
+        // console.log(err.message)
+        toast.error("User Not Register")
         // toast.error("Invalid User", err.message);
       });
   };

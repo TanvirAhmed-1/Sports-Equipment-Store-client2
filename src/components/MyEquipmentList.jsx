@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 import MyCard from "./MyCard";
 import { AuthContext } from "./AuthProvider";
+import { toast } from "react-toastify";
 
 const MyEquipmentList = () => {
 
@@ -16,11 +17,11 @@ const MyEquipmentList = () => {
     fetch(`http://localhost:5000/users/${user.email}`)
       .then((res) => res.json()) 
       .then((data) => {
-        console.log(data);  
+        // console.log(data);  
         setData(data);  
       })
       .catch((error) => {
-        console.error("Error fetching user data:", error); 
+        toast.error("Error fetching user data:", error); 
       });
 
   }, [user?.email]);
@@ -28,7 +29,7 @@ const MyEquipmentList = () => {
 
 
   const deleteProduct = (id) => {
-    console.log(id);
+    // console.log(id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -44,7 +45,7 @@ const MyEquipmentList = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
 
             if (data.deletedCount > 0) {
               const remaining = userdata.filter((value) => value._id !== id);

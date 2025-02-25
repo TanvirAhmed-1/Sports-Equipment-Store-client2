@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { FaGithub, FaGoogle } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "./AuthProvider";
 import { toast } from "react-toastify";
 
@@ -11,18 +11,20 @@ const Login = () => {
   const handleGoogleUser = () => {
     googleUser()
       .then((data) => {
-        console.log(data.user);
-        setUser(data.user);
+        // console.log(data.user);
+        // setUser(data.user);
         navigate("/");
       })
       .then((error) => {
-        console.log(error);
+        // console.log(error);
+        toast.error("Login Error")
       });
   };
 
   // github user
   const handleGithubLohIn = () => {};
-
+ const location=useLocation()
+//  console.log(location)
   // form user
   const handleFrom = (e) => {
     e.preventDefault()
@@ -31,12 +33,13 @@ const Login = () => {
     const password = form.password.value;
     userLogin(email,password)
     .then(data=>{
-      console.log(data.user)
+      // console.log(data.user)
       setUser(data.user);
-      navigate("/");
+      // navigate("/");
+      navigate(location?.state ? location.state : "/")
     })
     .then(error=>{
-      console.log(error.message)
+      // console.log(error.message)
       toast.error("User Error")
     })
 

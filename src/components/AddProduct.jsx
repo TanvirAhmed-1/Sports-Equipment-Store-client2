@@ -6,7 +6,7 @@ const AddProduct = () => {
 
   const {user}=useContext(AuthContext)
 
-  console.log(user.displayName,    user.email)
+  // console.log(user.displayName,    user.email)
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +36,7 @@ const AddProduct = () => {
       userEmail,
       userName,
     };
-    console.log("Submitted Data:", formData);
+    // console.log("Submitted Data:", formData);
     
     fetch("http://localhost:5000/products", {
       method: "POST",
@@ -47,7 +47,7 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.insertedId) {
           toast.success("Data Successfully Added to Server");
         }
