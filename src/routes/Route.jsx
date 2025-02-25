@@ -14,6 +14,7 @@ import AllSportseqube from '../components/AllSportseqube';
 import Products from '../components/Products';
 import NavBar from '../components/NavBar';
 import NavSlider from '../components/NavSlider';
+import ProductDetails from '../components/ProductDetails';
 
 
 const Route = createBrowserRouter([
@@ -70,6 +71,11 @@ const Route = createBrowserRouter([
                 element:<PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
             },
+            {
+                path:"/details/:id",
+                element:<ProductDetails></ProductDetails>,
+                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+            }
 
         ]
         

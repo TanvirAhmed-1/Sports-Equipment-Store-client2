@@ -56,7 +56,7 @@ const NavSlider = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="relative">
             <img
-              className="object-cover w-full lg:max-h-[700px] md:max-h-[500px] h-[400px]"
+              className="object-cover w-full lg:h-[900px] md:max-h-[500px] h-[400px]"
               src={slide.image}
               alt={`Slide ${index + 1}`}
             />
