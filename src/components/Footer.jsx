@@ -85,13 +85,18 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/order" className="hover:text-blue-600">
-                    Order
+                  <Link href="/AllSports" className="hover:text-blue-600">
+                    All Products
                   </Link>
                 </li>
                 <li>
-                  <Link href="/add-product" className="hover:text-blue-600">
+                  <Link href="/addProduct" className="hover:text-blue-600">
                     Add Product
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="hover:text-blue-600">
+                  Privacy Policy
                   </Link>
                 </li>
               </ul>

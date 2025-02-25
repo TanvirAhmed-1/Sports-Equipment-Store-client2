@@ -15,7 +15,7 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
 
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
   const [loader, setLoader] = useState(true);
 
   // google sign in

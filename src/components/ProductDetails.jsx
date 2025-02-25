@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const idData = useLoaderData();
@@ -63,7 +64,7 @@ const ProductDetails = () => {
 
           <div className="card-actions lg:gap-20 justify-start py-4">
             <Link to={"/"}>
-              <button className="btn btn-primary">Buy Now</button>
+              <button onClick={()=> toast("Thank you")} className="btn btn-primary">Buy Now</button>
             </Link>
           </div>
         </div>

@@ -23,14 +23,14 @@ const NavBar = () => {
         </NavLink>
 
         <NavLink to="/AllSports" className="hover:text-green-300 transition">
-          All Sports Product
+          All Sports Products
         </NavLink>
         <NavLink to="/addProduct" className="hover:text-green-300 transition">
           Add Product
         </NavLink>
         {user && (
           <NavLink to="/equipment" className="hover:text-green-300 transition">
-            My Equipment
+            My Products
           </NavLink>
         )}
         <NavLink to="/about" className="hover:text-green-300 transition">
@@ -92,9 +92,11 @@ const NavBar = () => {
                 <p className="text-lg font-medium text-gray-200">{user.displayName}</p>
               </div>
               <div>
-                <div tabIndex={0} role="button" className="btn m-1">
+                <div tabIndex={0} role="button" className=" m-1">
                   {" "}
-                  img
+                     {
+                      user ? <img  className="rounded-full md:w-14 w-10" src={user?.reloadUserInfo?.photoUrl} alt="" srcset="" />: <p>img</p>
+                     }
                   <img src="" alt="" srcset="" />
                 </div>
                 <ul
